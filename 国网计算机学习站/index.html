@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="国家电网计算机类考试离线学习站：知识点、模拟卷与专项练习">
+  <title>国网计算机类学习站</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button mobile-only" id="menuButton" aria-label="打开目录">☰</button>
+      <a class="brand" href="#/home" aria-label="返回首页">
+        <span class="brand-mark">GW</span>
+        <span><strong>国网计算机类学习站</strong><small>离线学习版</small></span>
+      </a>
+      <nav class="mode-tabs" aria-label="学习模块">
+        <a href="#/knowledge" data-mode="knowledge">知识点</a>
+        <a href="#/papers" data-mode="papers">模拟卷</a>
+        <a href="#/practice" data-mode="practice">专项练习</a>
+      </nav>
+      <div class="top-actions">
+        <button class="quiet-button" id="expandButton">展开全部</button>
+        <button class="icon-button" id="themeButton" aria-label="切换深色模式">◐</button>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="search-wrap" id="searchWrap">
+        <label for="searchInput">搜索全部知识点</label>
+        <div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="如：死锁、TCP、二叉树" autocomplete="off"></div>
+        <div id="searchResults" class="search-results" hidden></div>
+      </div>
+      <nav id="courseNav" aria-label="页面目录"></nav>
+      <div class="sidebar-foot" id="progressWrap">
+        <span id="progressText">学习进度 0%</span>
+        <div class="progress-track"><i id="progressBar"></i></div>
+      </div>
+    </aside>
+
+    <main class="main" id="main" tabindex="-1">
+      <div id="content" class="content"><div class="loading">正在读取本地学习资料…</div></div>
+    </main>
+    <div class="backdrop" id="backdrop" hidden></div>
+  </div>
+  <script src="data/content.js"></script>
+  <script src="data/questions.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
